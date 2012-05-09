@@ -3,16 +3,16 @@ require 'sinatra'
 require 'haml'
 
 class App < Sinatra::Application
-	enable :sessions
+  enable :sessions
 
-	configure :production do
-		set :haml, { :ugly => true, :format => :html5 }
-		set :clean_trace, true
-	end
+  configure :production do
+    set :haml, { :ugly => true, :format => :html5 }
+    set :clean_trace, true
+  end
 
-	configure :development do
+  configure :development do
     set :haml, { :format => :html5 }
-	end
+  end
   
   configure do
     # Last modification time for browser cache
