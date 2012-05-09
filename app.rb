@@ -19,10 +19,10 @@ class App < Sinatra::Application
     @last_mod_time = Time.now
   end
 
-	helpers do
-		include Rack::Utils
-		alias_method :h, :escape_html
-	end
+  helpers do
+    include Rack::Utils
+    alias_method :h, :escape_html
+  end
   
   before do
     headers "X-UA-Compatible" => "IE=Edge,chrome=1"
